@@ -1,0 +1,24 @@
+.button-container {
+  align-content: flex-end;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.button-value {
+  color: #ffffff;
+  background-color: #969696;
+  font-size: 19px;
+  border: 1px solid #ffffff;
+  border-radius: 1px;
+  padding: 10px 40px;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.button-value:hover {
+  color: #000000;
+  background-color: #ffffff;
+  border: 1px solid #969696;
+}

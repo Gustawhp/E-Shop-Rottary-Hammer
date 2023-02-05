@@ -1,0 +1,188 @@
+#my-account {
+  display: flex;
+  position: absolute;
+}
+
+.modal-my-account {
+  backdrop-filter: blur(15px);
+  background-color: rgba(0, 0, 0, 0.4);
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.modal-my-account-container {
+  background-color: rgb(255, 255, 255);
+  border: 1px solid black;
+  left: 50%;
+  height: 60vh;
+  margin-right: -50%;
+  position: fixed;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 570px;
+}
+
+.modal-my-account.modal-my-account-hidden {
+  display: none;
+}
+
+.header-my-account {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.3rem;
+  justify-content: flex-end;
+  padding: 15px;
+}
+
+.cancel-my-account {
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.my-account {
+  display: flex;
+  font-size: 28px;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.main-my-account {
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 0 25px;
+}
+
+.main-my-account-control {
+  display: flex;
+  flex-direction: column;
+}
+
+.change-email {
+  align-items: flex-start;
+  padding: 25px 0 0 0;
+}
+
+.change-email:hover {
+  color: rgb(139, 132, 240);
+  cursor: pointer;
+}
+
+.change-email-input {
+  display: none;
+  padding: 15px 0 0 0;
+}
+
+.email-imput {
+  display: flex;
+  flex-direction: column;
+}
+
+#email-confirm {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 25px 0 0;
+}
+
+#email-confirm:hover {
+  color: rgb(139, 132, 240);
+  cursor: pointer;
+}
+
+#email-my-account {
+  width: 50%;
+}
+
+.change-password {
+  padding: 25px 0 0 0;
+}
+
+.change-password:hover {
+  color: rgb(139, 132, 240);
+  cursor: pointer;
+}
+
+.change-password-input {
+  display: none;
+  padding: 15px 0 0 0;
+}
+
+.password-imput {
+  display: flex;
+  flex-direction: column;
+}
+
+#password2-confirm {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 25px 0 0;
+}
+
+#password2-confirm:hover {
+  color: rgb(139, 132, 240);
+  cursor: pointer;
+}
+
+#password-check-my-account,
+#password-check2-my-account {
+  width: 50%;
+}
+
+.footer-my-account {
+  display: flex;
+  justify-content: flex-end;
+  padding: 45px 25px 0;
+}
+
+#logout:hover {
+  color: rgb(139, 132, 240);
+  cursor: pointer;
+}
+
+.main-my-account-control small {
+  padding: 5px 0 15px 0;
+}
+
+.main-my-account-control small {
+  visibility: hidden;
+}
+
+.main-my-account-control.error small {
+  color: #e74c3c;
+  visibility: visible;
+}
+
+.main-my-account-control.success small {
+  color: #2ecc71;
+  visibility: visible;
+}
+
+.main-my-account-control.success input {
+  border-color: #2ecc71;
+}
+
+.main-my-account-control.error input {
+  border-color: #e74c3c;
+}
+
+@media (max-width: 600px) {
+  .modal-my-account {
+    border: none;
+    height: 100%;
+    top: 0;
+    width: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  #email-my-account {
+    width: 90%;
+  }
+  #password-check-my-account,
+  #password-check2-my-account {
+    width: 90%;
+  }
+}

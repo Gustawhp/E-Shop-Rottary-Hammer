@@ -1,0 +1,140 @@
+.modal-no-blur {
+  filter: none !important;
+}
+
+#login {
+  display: flex;
+}
+
+.modal-login {
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(15px);
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.modal-login-container {
+  background-color: rgb(255, 255, 255);
+  border: 1px solid black;
+  height: 60vh;
+  left: 50%;
+  margin-right: -50%;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  width: 570px;
+}
+
+.modal-login.modal-login-hidden {
+  display: none;
+}
+
+.header-login {
+  display: flex;
+  font-size: 1.3rem;
+  justify-content: flex-end;
+  padding: 15px;
+}
+
+.cancel-login {
+  cursor: pointer;
+}
+
+.main-login {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.main-login > div:first-of-type {
+  font-size: 28px;
+  margin-top: 40px;
+}
+
+.form-login {
+  margin-top: 10px;
+}
+
+.form-login-control {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-login-control input {
+  height: 30px;
+  width: 300px;
+}
+
+.form-login div a {
+  color: rgb(139, 132, 240);
+}
+
+.main-login div button {
+  height: 40px;
+  width: 300px;
+  color: #ffffff;
+  background-color: #969696;
+  border: 1px solid #ffffff;
+  border-radius: 1px;
+  cursor: pointer;
+}
+
+.main-login div button:hover {
+  color: #000000;
+  background-color: #ffffff;
+  border: 1px solid #969696;
+}
+
+.main-login div a {
+  padding: 30px;
+}
+
+.main-login div {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.error-login {
+  visibility: hidden;
+}
+
+.error-login.error {
+  color: #e74c3c;
+  visibility: visible;
+}
+
+@media (max-width: 600px) {
+  .modal-login {
+    border: none;
+    height: 100%;
+    top: 0;
+    width: 100%;
+  }
+}
+
+@media (max-width: 310px) {
+  .form-login {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .form-login-control{
+    width: 90%;
+  }
+  .form-login-control input {
+    height: 30px;
+    width: 90%;
+  }
+  .main-login div button {
+    height: 40px;
+    width: 100%;
+  }
+  
+}
+

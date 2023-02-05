@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Shop Rotary Hammer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,100,0,-25"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,0,0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,-25"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,300,0,-25"
+    />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/products.css" />
+    <link rel="stylesheet" href="./css/login.css" />
+    <link rel="stylesheet" href="./css/signup.css" />
+    <link rel="stylesheet" href="./css/myAccount.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-top">
+        <div class="header-top-container">
+          <ul class="header-top-links">
+            <li><a id="button-login" class="button-login">Login</a></li>
+            <li>
+              <a id="button-my-account" class="button-my-account">My Account</a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="current-currency">USD</div>
+                <span class="icon-container"></span
+                ><i class="material-symbols-outlined">expand_more</i>
+              </a>
+              <ul class="currency">
+                <li class="current">
+                  <a href="#" data-currency="usd" class="currency-type active"
+                    >USD</a
+                  >
+                </li>
+                <li>
+                  <a href="#" data-currency="pln" class="currency-type">PLN</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#"
+                ><div class="current-language">English</div>
+                <span class="icon-container"></span
+                ><i class="material-symbols-outlined">expand_more</i></a
+              >
+              <ul class="language">
+                <li class="current">
+                  <a href="#" language="english" class="language-type active"
+                    >English</a
+                  >
+                </li>
+                <li>
+                  <a href="#" language="polish" class="language-type">Polish</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="header-top-navigation">
+          <div class="navigation-container">
+            <div class="logo-container">
+              <span class="material-symbols-outlined"> tools_power_drill</span>
+              <p>Rotaty Hammer</p>
+            </div>
+          </div>
+          <div class="search-box">
+            <div class="search">
+              <span class="material-symbols-outlined"> search </span>
+              <input
+                type="search"
+                id="search-id"
+                placeholder="Search for products"
+                aria-label="search for products"
+              />
+            </div>
+          </div>
+          <div class="shopping">
+            <ul>
+              <li>
+                <div id="icon-cart" class="icon-cart">
+                  <i class="material-symbols-outlined"> shopping_cart </i>
+                  <div class="flyItem">
+                    <span class="item-number"> 0 </span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="main-header">
+        <div class="button-container">
+          <button class="button-value button-value-all" value="all">All</button>
+          <button class="button-value" value="SDS-Plus">SDS-Plus</button>
+          <button class="button-value" value="SDS-Max">SDS-Max</button>
+        </div>
+        <div id="products">
+          <div id="modal" class="modal modal-hidden">
+            <div class="modal-container">
+              <div class="cart">
+                <div class="your-cart">Your Cart</div>
+                <div class="cart-header">
+                  <div class="cart-item">Item</div>
+                  <div class="cart-unit-price">Unit price</div>
+                  <div class="cart-unit">Unit</div>
+                </div>
+                <div id="cart-items" class="cart-items"></div>
+                <div class="cart-footer">
+                  <div class="subtotal">
+                    <li class="sub-total"></li>
+                    <li class="sub-price"></li>
+                  </div>
+                  <div class="cancel">Cancel</div>
+                  <div class="checkout">Proceed to checkout</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="modal-login" class="modal-login modal-login-hidden">
+            <div class="modal-login-container">
+              <div class="header-login">
+                <div class="cancel-login">X</div>
+              </div>
+              <div class="main-login">
+                <div class="login-title">Login</div>
+                <form class="form-login" id="form-login">
+                  <div class="form-login-control">
+                    <input
+                      type="text"
+                      placeholder="User Name"
+                      id="user-name-login"
+                      aria-label="User Name"
+                    />
+                  </div>
+                  <div class="form-login-control">
+                    <input
+                      type="text"
+                      placeholder="Password"
+                      id="password-login"
+                      aria-label="Password"
+                    />
+                    <small class="error-login">Error</small>
+                  </div>
+                  <div>
+                    <a href="#" class="forgot-pass">Forgot password?</a>
+                  </div>
+                  <div>
+                    <button class="submit-login">Submit</button>
+                  </div>
+                  <div>
+                    <span class="login-text">Don't have an account?</span>
+                    <a href="#" class="signup-link">Signup</a>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div id="modal-signup" class="modal-signup modal-signup-hidden">
+            <div class="modal-signup-container">
+              <div class="header-signup">
+                <div class="cancel-signup">X</div>
+              </div>
+              <div class="main-signup">
+                <div class="signup-title">Signup</div>
+                <form class="form-signup" id="form-signup">
+                  <div class="form-signup-control">
+                    <input
+                      type="text"
+                      placeholder="User Name"
+                      id="user-name-signup"
+                      aria-label="User Name"
+                    />
+                    <small>Error</small>
+                  </div>
+                  <div class="form-signup-control">
+                    <input type="text" placeholder="Email" id="email-signup" />
+                    <small>Error</small>
+                  </div>
+                  <div class="form-signup-control">
+                    <input
+                      type="text"
+                      placeholder="Password"
+                      id="password-signup"
+                      aria-label="Password"
+                    />
+                    <small>Error</small>
+                  </div>
+                  <div class="form-signup-control">
+                    <input
+                      type="text"
+                      placeholder="Password Check"
+                      id="password-check-signup"
+                      aria-label="Password Check"
+                    />
+                    <small>Error</small>
+                  </div>
+                  <div>
+                    <button class="submit-signup">Submit</button>
+                  </div>
+                  <div>
+                    <span class="signup-text">Already have an account?</span>
+                    <a href="#" class="login-link">Login</a>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div
+            id="modal-my-account"
+            class="modal-my-account modal-my-account-hidden"
+          >
+            <div class="modal-my-account-container">
+              <div class="header-my-account">
+                <div class="cancel-my-account">X</div>
+                <div class="my-account">My Account</div>
+              </div>
+              <div class="main-my-account">
+                <div class="main-my-account-control">
+                  <div class="change-email">Change E-mail</div>
+                  <div class="change-email-input">
+                    <div class="email-imput">
+                      <input
+                        type="text"
+                        placeholder="Email"
+                        id="email-my-account"
+                        aria-label="Email"
+                      /><small>Error</small
+                      ><a href="#" id="email-confirm">Confirm</a>
+                    </div>
+                  </div>
+                  <div class="change-password">Change Password</div>
+                  <div class="change-password-input">
+                    <div>
+                      <div class="password-imput">
+                        <input
+                          type="text"
+                          placeholder="Password"
+                          id="password-check-my-account"
+                          aria-label="Password Check"
+                        /><small>Error</small>
+                      </div>
+                      <div class="password-imput">
+                        <input
+                          type="text"
+                          placeholder="Password Check 2"
+                          id="password-check2-my-account"
+                          aria-label="Password Check Two"
+                        /><small>Error</small>
+                      </div>
+                      <a href="#" id="password2-confirm">Confirm</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="footer-my-account">
+                <span> <a href="#" id="logout">Log Out</a></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script type="module" src="login.js"></script>
+    <script type="module" src="validation.js"></script>
+    <script src="products.js"></script>
+    <script type="module" src="changeValue.js"></script>
+    <script type="module" src="renderProducts.js"></script>
+    <script type="module" defer src="changeLanguage.js"></script>
+    <script src="filterProducts.js"></script>
+    <script src="searchProducts.js"></script>
+    <script src="addToCart.js"></script>
+    <script src="modal.js"></script>
+    <script type="module" src="main.js"></script>
+    <script type="module" src="myAccount.js"></script>
+    <script src="logout.js"></script>
+  </body>
+</html>
